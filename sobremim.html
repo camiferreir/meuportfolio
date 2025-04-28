@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camille Brito - Portfólio</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="sobremim.css">
+</head>
+
+<body>
+
+  <header>
+    <img src="img2.jpg" alt="Minha Foto">
+    <h1>Camille Ferreira Brito</h1>
+
+  </header>
+
+  <nav>
+    <a href="#" onclick="mostrarPagina('inicio')">Página Inicial</a>
+    <a href="#" onclick="mostrarPagina('sobre')">Sobre Mim</a>
+    <a href="#" onclick="mostrarPagina('conhecimentos')">Conhecimentos</a>
+    <a href="#" onclick="mostrarPagina('contato')">Contato</a>
+  </nav>
+
+  <main>
+    <section id="inicio" class="active">
+      <h2>Bem-vindo(a)!</h2>
+      <p>Olá! Eu sou apaixonada por tecnologia e criação de soluções digitais. 
+        Explore meu portfólio e conheça mais!</p>
+    </section>
+
+    <section id="sobre">
+      <h2>Sobre Mim</h2>
+      <p>Meu nome é Camille Ferreira Brito, tenho 16 anos e atualmente estou cursando o segundo ano do ensino médio no Instituto Estadual de Educação Rubén Darío (IEE Rubén Darío).
+        Sou apaixonada pela tecnologia e estou em formação no curso técnico em Informática pela Ulbra São Lucas, buscando constantemente me aperfeiçoar nas áreas de desenvolvimento e inovação digital.
+        Também estou aprimorando minhas habilidades linguísticas no módulo 1 de Inglês na escola ACELE, acreditando que a comunicação global é essencial para construir uma carreira sólida.
+        Com paixão pela aprendizagem contínua, criatividade e compromisso, estou sempre em busca de novos desafios para expandir meus conhecimentos e contribuir de forma positiva em projetos e equipes.</p>
+    </section>
+
+    <section id="conhecimentos">
+      <h2>Conhecimentos</h2>
+      <p>Possuo habilidades sólidas em HTML, CSS e JavaScript, com foco na criação de interfaces responsivas e funcionais. Durante minha formação técnica em Informática na Ulbra São Lucas, também estou adquirindo experiência em lógica de programação e desenvolvimento web. 
+        </p>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+
+      <p class="contato-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:ferreiracamille819@gmail.com">ferreiracamille819@gmail.com</a>
+      </p>
+
+      <p class="contato-item">
+        <i class="fab fa-whatsapp"></i>
+        <a href="https://wa.me/qr/YXXKSY3JZ5YHM1" target="_blank">(51) 99409-8204 (WhatsApp)</a>
+      </p>
+
+      <p class="contato-item">
+        <i class="fab fa-github"></i>
+        <a href="https://github.com/camiferreir" target="_blank">github.com/camiferreir</a>
+      </p>
+
+      <p class="contato-item">
+        <i class="fab fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/camille-ferreira-4a2901322" target="_blank">Camille Ferreira</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Camille Brito - Todos os direitos reservados
+  </footer>
+
+  <button id="btnTopo" title="Voltar ao Topo">↑</button>
+
+  <script>
+    function mostrarPagina(pagina) {
+      const secoes = document.querySelectorAll('main section');
+      secoes.forEach(secao => secao.classList.remove('active'));
+      document.getElementById(pagina).classList.add('active');
+    }
+
+    const btnTopo = document.getElementById("btnTopo");
+
+    window.onscroll = function() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        btnTopo.style.display = "block";
+      } else {
+        btnTopo.style.display = "none";
+      }
+    };
+
+    btnTopo.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
+
+</body>
+</html>
+
+
